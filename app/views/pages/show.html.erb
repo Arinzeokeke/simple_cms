@@ -19,6 +19,14 @@
       <td><%= @page.position %></td>
     </tr>
     <tr>
+      <th>Permalink</th>
+      <td><%= @page.permalink %></td>
+    </tr>
+    <tr>
+      <th>PSubject id</th>
+      <td><%= @page.subject_id %></td>
+    </tr>
+    <tr>
       <th>Visible?</th>
       <td><%= @page.visible ? 'true' : 'false' %></td>
     </tr>
@@ -29,6 +37,10 @@
     <tr>
       <th>Updated</th>
       <td><%= @page.updated_at %></td>
+    </tr>
+    tr>
+      <th>Sections</th>
+      <td><%= @page.sections.size %></td>
     </tr>
   </table>
 

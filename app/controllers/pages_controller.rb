@@ -1,7 +1,7 @@
 class PagesController < ApplicationController
   layout false
   def index
-    @pages = Page.all
+    @pages = Page.sorted
   end
 
   def show
@@ -54,6 +54,6 @@ class PagesController < ApplicationController
 
   private 
   def pages_params
-    params.require(:page).permit(:name, :visible, :position)
+    params.require(:page).permit(:name, :visible, :position, :subject_id, :permalink)
   end
 end

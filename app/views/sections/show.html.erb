@@ -24,6 +24,21 @@
     </tr>
 
     <tr>
+      <th>Page ID</th>
+      <td><%= @section.page_id %></td>
+    </tr>
+
+    <tr>
+      <th>Content</th>
+      <td><%= @section.content %></td>
+    </tr>
+
+    <tr>
+      <th>Visible?</th>
+      <td><%= @section.visible ? 'true' : 'false' %></td>
+    </tr>
+
+    <tr>
       <th>Created</th>
       <td><%= @section.created_at %></td>
     </tr>
