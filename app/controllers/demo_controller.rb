@@ -1,5 +1,5 @@
 class DemoController < ApplicationController
-	layout false
+	#layout false
 	@list= ['a', 's', 'd', 'f']
 
 	def initialise
