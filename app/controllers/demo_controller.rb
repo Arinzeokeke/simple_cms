@@ -14,4 +14,8 @@ class DemoController < ApplicationController
 		render('index')
 
 	end
+
+	def text_helpers
+
+	end
 end
