@@ -12,11 +12,13 @@ class SubjectsController < ApplicationController
 
   def new
     @subject = Subject.new
+    @subject_count = Subject.count + 1
   end
 
   def create
     #instatntiate
     @subject = Subject.new(subject_params)
+    @subject_count = Subject.count + 1
     #save
     if @subject.save
       #save success
@@ -32,6 +34,7 @@ class SubjectsController < ApplicationController
 
   def edit
     @subject = Subject.find(params[:id])
+    @subject_count = Subject.count
   
   end
 
@@ -50,6 +53,8 @@ class SubjectsController < ApplicationController
 
   def update
     #find
+    
+
     @subject = Subject.find(params[:id])
     #update
     if @subject.update_attributes(subject_params)
@@ -59,6 +64,7 @@ class SubjectsController < ApplicationController
 
     else
       # failure
+      @subject_count = Subject.count
       render("edit")
 
     end
