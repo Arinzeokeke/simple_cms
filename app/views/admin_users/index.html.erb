@@ -1,0 +1,32 @@
+
+<% @page_title = "Admin Users" %>
+<div class="admins index">
+  <h2>Admins</h2>
+  <%= link_to("<< Access Index", {:controller => "access" , :action => "index"}, :class => 'back-link') %>
+
+
+  <%= link_to("Add New Admin", {:action => "new"}, :class => 'action new') %>
+  
+  <table class="listing" summary="Admin list">
+    <tr class="header">
+      <th>Username</th>
+      <th>First Name</th>
+      <th>Last Name</th>
+      <th>Email</th>
+    </tr>
+    <% @admins.each do |admin| %>
+    <tr>
+      <td><%= admin.username %></td>
+      <td><%= admin.first_name %></td>
+      <td><%= admin.last_name %></td>
+      <td><%= mail_to(admin.email) %></td>
+      <td class="actions">
+        <%= link_to("Edit", {:action => "edit", :id => admin.id}, :class => 'action edit') %>
+        <%= link_to("Delete", {:action => "delete", :id => admin.id}, :class => 'action delete') %>
+        
+     
+      </td>
+    </tr>
+    <% end %>
+  </table>
+</div>

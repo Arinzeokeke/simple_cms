@@ -4,6 +4,6 @@ class AddPasswordDigestToAdminUsers < ActiveRecord::Migration[5.0]
   end
 
   def down
-  	remove_column "admin_users", "password_digest", :string 
+  	remove_column "admin_users", "password_digest"
   end
 end

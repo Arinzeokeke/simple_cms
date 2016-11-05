@@ -1,23 +1,39 @@
 Rails.application.routes.draw do
-  get 'sections/index'
 
-  get 'sections/show'
+  get 'admin_users/index'
 
-  get 'sections/new'
+  get 'admin_users/new'
 
-  get 'sections/edit'
+  get 'admin_users/edit'
 
-  get 'sections/delete'
+  get 'admin_users/delete'
 
-  get 'pages/index'
+  root 'demo#index'
+  get 'admin', :to => 'access#index'
 
-  get 'pages/show'
 
-  get 'pages/new'
 
-  get 'pages/edit'
+  # get 'access/login'
 
-  get 'pages/delete'
+  # get 'sections/index'
+
+  # get 'sections/show'
+
+  # get 'sections/new'
+
+  # get 'sections/edit'
+
+  # get 'sections/delete'
+
+  # get 'pages/index'
+
+  # get 'pages/show'
+
+  # get 'pages/new'
+
+  # get 'pages/edit'
+
+  # get 'pages/delete'
 
   # get 'subjects/index'
 
@@ -30,7 +46,7 @@ Rails.application.routes.draw do
   # get 'subjects/delete'
 
   #resources :demo
-  root 'demo#index'
+  
   match ':controller(/:action(/:id))', :via => [:get, :post]
 
 
