@@ -20,7 +20,7 @@ a.action { float: right; padding: 2px 5px; margin: 0 0 1em 1em;
 	a.action:hover { background: #B6D491; }
 
 	/* small action buttons */
-	.actions { width: 200px; }
+	.actions { width: 230px; }
 	.actions a.action { float: left; min-width: 3.5em;
 		padding: 1px 2px; margin: 2px 5px; font-size: 0.7em; }
 
