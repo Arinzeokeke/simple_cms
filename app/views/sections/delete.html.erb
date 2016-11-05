@@ -3,7 +3,7 @@
 <div class="sections delete">
   <h2>Delete Section</h2>
 
-  <%= form_for(:section, :url => {:action => 'destroy', :id => @section.id}) do |f| %>
+  <%= form_for(:section, :url => {:action => 'destroy', :id => @section.id, :page_id => @page.id}) do |f| %>
 
     <p>Are you sure you want to permanently delete this section?</p>
 
